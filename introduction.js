@@ -1,3 +1,5 @@
+"use strict";
+
 (function() {
   console.clear();
 })();
@@ -23,15 +25,12 @@ for (const dataType of dataTypes) {
 
 // console.log(`BigINT stores values that cannot be stored in normal js Number`);
 
-
 let x = BigInt(123456789012345678901234567890)
 
 // console.log(x);
 // console.log(typeof x);
 
-
 // console.log(typeof dataTypes);
-
 
 function randomFunc() {
   let x = BigInt(123456789012345678901234567890)
@@ -41,7 +40,6 @@ function randomFunc() {
   console.log(typeof x);
   console.log(typeof dataTypes);
 }
-
 
 var carType = null
 // console.log(carType);
@@ -53,11 +51,9 @@ if(true){
 
 // console.log(carType);
 
-
 // console.log(`Primitive types (e.g., numbers, strings) store their value directly in the variable. 
   // Reference types (e.g., objects, arrays) store a reference (memory address) to the value
   // `);
-
 
   const person = {
     firstName: "John",
@@ -67,7 +63,6 @@ if(true){
       return this.firstName + " " + this.lastName;
     }
   };
-
 
   // console.log(person.fullName());
   
@@ -79,8 +74,7 @@ const arr3 = Object.entries(person)
 // console.log('Array 2: ', arr2);
 // console.log('Array 3: ', arr3);
 
-
-const Car = function (name, model, company, fuelAvg) {
+function Car(name, model, company, fuelAvg) {
   this.name = name;
   this.model = model;
   this.company = company;
@@ -95,10 +89,7 @@ const car1 = new Car('Civic', 2020, "Honda", 13.4)
 
 // console.log(car1 instanceof Car);
 
-
 // console.log(typeof car1.Details);
-
-
 
 // for( key in car1){
 
@@ -116,10 +107,8 @@ const car1 = new Car('Civic', 2020, "Honda", 13.4)
 const car2 = new Car('City', 2023, "Honda", 19.7)
 // car1.Details()
 
-
 const value = 'asdfasdf';
 // console.log(value.charAt(9));
-
 
 let text = "Apple, Banana, Kiwi";
 // console.log(text.slice(7, 13))
@@ -132,13 +121,11 @@ let y = 123;
 // console.log((123).valueOf())
 // console.log((100 + 23).valueOf())
 
-
 const arrVsObj = `In JavaScript, arrays use numbered indexes.  
 
 In JavaScript, objects use named indexes.
 
 Arrays are a special kind of objects, with numbered indexes.`
-
 
 const array = new Array(30)
 
@@ -165,7 +152,6 @@ const date3 = new Date('2025')
 // console.log(date3.getDate())
 // console.log(date3.getHours())
 
-
 // function randomFunc() {
 //   let num = Math.floor(Math.random() * 10 ) + 1;
 //   console.log(num);
@@ -186,14 +172,12 @@ const date3 = new Date('2025')
 
 // console.log(randomNums);
 
-
 const userName = "";
 const defaultUserName = "Anonymous";
 
 const currUser = userName || defaultUserName
 
 // console.log(currUser);
-
 
 // console.log(`For in is used for Objects
   // For of is used for Strings and Arrays   
@@ -206,7 +190,6 @@ const currUser = userName || defaultUserName
 
   // console.log(keys, values);
   
-
   // for ( letter of mySet){
   //   console.log(letter)
   // }
@@ -215,7 +198,6 @@ const currUser = userName || defaultUserName
 
 const myMap = new Map([['a', 100], ['b', 150], ['c', 200]])
 
-
 // console.log(myMap.get('b'));
 // console.log(myMap.size);
 // console.log(`Values: ${myMap.values()}`);
@@ -223,7 +205,6 @@ const myMap = new Map([['a', 100], ['b', 150], ['c', 200]])
 // console.log(`Entries: ${myMap.entries()}`);
 
 // console.log(car1.constructor);
-
 
 const [datatype1, datatype2] = dataTypes
 // console.log(datatype1, datatype2);
@@ -291,13 +272,11 @@ const nadeem = new Teacher('Nadeem', 'Taj', 47, 'Teacher', 'ICO', 17, 23)
 
 const hamza = new Person('Hamza',  'Aamir', 22, "Software Engineer")
 
-
 Object.defineProperty(hamza, 'professionAndName', {
   get: function (){
     console.log(`Name: ${this.firstName} ${this.lastName} \nProfession: ${this.profession}`);
   }
 })
-
 
 // console.log(Object.values(hamza));
 // console.log(Object.keys(hamza));
@@ -357,7 +336,6 @@ const multiply = createMultiplier(4);
 
 /**************************************** Callbacks ****************************************/
 
-
 function processArray(numbers, filterArr, mulBy2) {
   let arr = numbers.filter(filterArr)
   arr = arr.map(mulBy2)
@@ -370,7 +348,6 @@ const numbers = [1, 2, -3, 4, -5, 6, 10, 8, 9];
 
 // console.log(processArray(numbers, filterArr, mulBy2))
 
-
 function sumWithDelay(arr, callback, delaySeconds) {
   const sum = arr.reduce(callback)
   setTimeout(() =>{
@@ -381,7 +358,6 @@ function sumWithDelay(arr, callback, delaySeconds) {
 const sumOfArr = (total, value) => ( total + value );
 
 // sumWithDelay(numbers, sumOfArr, 2000)
-
 
 function testTimeOut(){
   setTimeout(() => {
@@ -400,7 +376,6 @@ mixedArr.sort()
 // console.log(mixedArr.toReversed());
 // console.log(`Length: ${mixedArr.length}`);
 
-
 // export { mixedArr };
 
 const str = "www/w3schools/js/functions/parameters/defaultparameters"
@@ -415,11 +390,9 @@ for (text of strArr){
 
 // console.log('');
 
-
 for (text in strArr){
 //   console.log(strArr[text]);
 }
-
 
 const repeatingArr = [1,2,1,3,2,4,3,5,4,6,5]
 // console.log(repeatingArr);
@@ -452,7 +425,6 @@ arr4[4][1] = "Altered Value"
 
 // console.log(`Altering on Arr: ${arr6}`);
 
-
 function testingThis() {
   console.log(this)
 }
@@ -464,7 +436,6 @@ function testingThis() {
 // }, 1000);
 
 // testingThis();
-
 
 const obj1 = {
   name : "John Doe",
@@ -496,7 +467,9 @@ Object.assign(obj2, obj1);
 
 function testingPromises() {
   new Promise((resolve, reject) => {
+    
     const dbConnected = true;
+    
     if(dbConnected){
       setTimeout(() => {
         console.log(`Database connneccted Successfully`);      
@@ -522,9 +495,9 @@ function getGitHubInfo() {
   .catch((err) => console.log(err));
 }
 
-getGitHubInfo()
+// getGitHubInfo()
 
-// console.log('I was Executed First');
+// console.log('I was Executed before Fetch');
 
 const func = function () {
   console.log('Test function default return')
@@ -576,3 +549,70 @@ function callFuncs() {
 }
 
 // callFuncs()
+
+String.prototype.reverString = function() {
+  const length = this.length - 1;
+  let reversedString = "";
+  
+  for ( let i = length ; i >= 0 ; i--){
+    reversedString += this[i]    
+  }
+  return reversedString;
+}
+
+// console.log('Ahmed'.length)
+
+const userName1 = 'Ahmed'
+// console.log(userName1.reverString())
+
+const myArr = [[1,2],[3,4],[5,6]];
+
+const newArr = myArr.flat();
+
+// console.log(myArr)
+// console.log(newArr)
+
+function divide(x, y) {
+  try {
+    if ( x == 0 || y == 0) throw new Error ("Number can't be zero")
+    console.log(x / y);
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+// divide(2,0)
+
+// console.log('After throw statement outside func')
+
+Array.prototype.reverseArr = function () {
+  const newArr = [];
+  const length = this.length - 1;
+  for(let i = length ; i >= 0 ; i--){
+    newArr.push(this[i])
+  }
+  return newArr;
+}
+
+const oddNums = [1,3,5,7,9,11,13];
+const reverseOddNums = oddNums.reverseArr()
+
+// console.log(reverseOddNums)
+
+function* generatorRandNum() {
+  yield {'value':`This is first value ${Math.floor(Math.random()*10)}`}
+  yield {name: 'ahmed', rollNo: 15}
+  yield {name: 'ali', rollNo: 20}
+  yield {name: 'hamza', rollNo: 30}
+}
+
+function yieldFunc(){
+  const generate = generatorRandNum();
+  console.log(generate.next())
+  console.log(generate.next())
+  console.log(generate.next())
+  console.log(generate.next())
+  console.log(generate.next())
+}
+
+yieldFunc()
