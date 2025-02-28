@@ -593,15 +593,15 @@ const userName1 = "Ahmed";
 // console.log(userName1.reverString())
 
 const myArr = [
-  [1, 2],
+  [1, [12, 435, 12]],
   [3, 4],
   [5, 6],
 ];
 
-const newArr = myArr.flat();
+const newArr = myArr.flat(Infinity);
 
 // console.log(myArr)
-// console.log(newArr)
+// console.log(newArr);
 
 function divide(x, y) {
   try {
@@ -671,3 +671,5 @@ array1.push("Ahmed");
 array1.push(Boolean("Ahmed"));
 
 // console.log(array1);
+
+const IBAN = " PK80UNIL0109000271319407";
